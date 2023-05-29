@@ -30,16 +30,6 @@ void deleteNode(Node* target) {
 	free(target);
 }
 
-void deleteTree(Node* root) {
-
-	while (root != NULL) {
-		deleteTree(root->left);
-		deleteTree(root->right);
-
-		deleteNode(root);
-	}
-}
-
 bool linkNode(Node* parent, Node* child, int option) {
 
 	if ((option != LEFT) && (option != RIGHT))
